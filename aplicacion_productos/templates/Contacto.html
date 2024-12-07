@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    {% load static %} <!-- Cargar la etiqueta static -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tu Nombre o Nombre de la Empresa">
+    <meta name="description" content="Descubre los mejores servicios locales en República Dominicana, incluyendo veterinarias y aseo de mascotas en Santo Domingo y Santiago.">
+    <meta name="keywords" content="servicios locales, veterinarias, aseo de mascotas, Santo Domingo, Santiago, República Dominicana">
+    <link rel="icon" href="{% static 'imagenes/logo.jpg' %}" type="image/jpg">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+</head>
+<body>
+    {% include 'Header.html' %} <!-- Incluye el encabezado -->
+
+
+    <section id="contacto" class="my-5">
+        <div class="contact-section container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../static/imagenes/PerroTelefono.webp" alt="Políticas" class="card-img-top" alt="Servicios Locales">
+                </div>
+
+                <div class="col-md-6">
+                    <h2>Contáctanos</h2>
+                    <form id="contact-form" action="mailto:dr21-1740@unphu.edu.do?subject=Consulta desde la página de Cuidado de Mascotas" method="POST" enctype="text/plain">
+                        <div class="form-group mb-3">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'PieDePagina.html' %} <!-- Incluye el pie de página -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

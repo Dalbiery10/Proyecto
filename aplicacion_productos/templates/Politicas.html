@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tu Nombre o Nombre de la Empresa">
+    {% load static %} <!-- Cargar la etiqueta static -->
+    <meta name="description" content="Descubre los mejores servicios locales en República Dominicana, incluyendo veterinarias y aseo de mascotas en Santo Domingo y Santiago.">
+    <meta name="keywords" content="servicios locales, veterinarias, aseo de mascotas, Santo Domingo, Santiago, República Dominicana">
+    <link rel="icon" href="{% static 'imagenes/logo.jpg' %}" type="image/jpg">
+    <title>Políticas de Privacidad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+</head>
+<body>
+    {% include 'Header.html' %} <!-- Incluye el encabezado -->
+
+
+    <section id="privacidad" class="my-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Políticas de Privacidad</h2>
+            <p class="text-center mb-5">Consulta nuestras políticas para proteger tu información y la de tu mascota.</p>
+
+            <!-- Sección: Introducción -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h3>Introducción</h3>
+                    <p>Nos comprometemos a proteger tu privacidad y la de tu mascota. Esta Política de Privacidad detalla cómo recogemos, usamos y protegemos tu información personal cuando utilizas nuestros servicios en línea. Te animamos a leerla con atención para comprender cómo manejamos tus datos.</p>
+                </div>
+            </div>
+
+            <!-- Sección: Protección de Información Personal -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="privacy-item" id="info-personal">
+                        <i class="bi bi-shield-lock privacy-icon" style="font-size: 40px;"></i>
+                        <h3>Protección de Información Personal</h3>
+                        <p>Nos aseguramos de proteger tu información personal utilizando protocolos de seguridad avanzados. Implementamos medidas como cifrado de datos, firewalls y controles de acceso para evitar accesos no autorizados a tu información.</p>
+                    </div>
+                </div>
+
+                <!-- Sección: Uso de Datos -->
+                <div class="col-md-6 mb-4">
+                    <div class="privacy-item" id="uso-datos">
+                        <i class="bi bi-file-earmark-text privacy-icon" style="font-size: 40px;"></i>
+                        <h3>Uso de Datos</h3>
+                        <p>Recopilamos información personal para proporcionarte los mejores servicios posibles. Usamos tus datos para mejorar tu experiencia, personalizar contenido y mantenerte informado sobre nuestras actualizaciones. Nunca compartimos tus datos con terceros sin tu consentimiento explícito.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección: Cookies -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="privacy-item" id="cookies">
+                        <i class="bi bi-cookie privacy-icon" style="font-size: 40px;"></i>
+                        <h3>Uso de Cookies</h3>
+                        <p>Utilizamos cookies para mejorar la experiencia de navegación en nuestra página web. Las cookies nos permiten almacenar información sobre tus preferencias y mejorar la funcionalidad del sitio. Puedes configurar tu navegador para rechazar las cookies si así lo deseas.</p>
+                    </div>
+                </div>
+
+                <!-- Sección: Derechos del Usuario -->
+                <div class="col-md-6 mb-4">
+                    <div class="privacy-item" id="derechos-usuario">
+                        <i class="bi bi-person-lock privacy-icon" style="font-size: 40px;"></i>
+                        <h3>Derechos del Usuario</h3>
+                        <p>Tienes el derecho de acceder, corregir, eliminar o restringir el uso de tus datos personales en cualquier momento. Puedes ejercer estos derechos poniéndote en contacto con nosotros a través de nuestro formulario de contacto o por correo electrónico.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección: Retención de Datos -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="privacy-item" id="retencion-datos">
+                        <i class="bi bi-clock privacy-icon" style="font-size: 40px;"></i>
+                        <h3>Retención de Datos</h3>
+                        <p>Retenemos tus datos solo durante el tiempo necesario para cumplir con los fines para los que fueron recogidos. Una vez que ya no sean necesarios, procedemos a su eliminación o anonimización, según corresponda.</p>
+                    </div>
+                </div>
+
+                <!-- Sección: Seguridad de los Datos -->
+                <div class="col-md-6 mb-4">
+                    <div class="privacy-item" id="seguridad-datos">
+                        <i class="bi bi-lock privacy-icon" style="font-size: 40px;"></i>
+                        <h3>Seguridad de los Datos</h3>
+                        <p>Implementamos diversas medidas de seguridad para proteger la integridad y confidencialidad de tus datos. Sin embargo, debes entender que ningún sistema de almacenamiento o transmisión de datos es completamente seguro, pero nos esforzamos al máximo para protegerte.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección: Modificaciones de la Política -->
+            <div class="row">
+                <div class="col-md-12 mb-4">
+                    <div class="privacy-item" id="modificaciones">
+                        <i class="bi bi-pencil-square privacy-icon" style="font-size: 40px;"></i>
+                        <h3>Modificaciones de la Política</h3>
+                        <p>Nos reservamos el derecho de actualizar o modificar esta Política de Privacidad en cualquier momento. Cualquier cambio será publicado en esta página con la fecha de la última actualización.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    {% include 'PieDePagina.html' %} <!-- Incluye el pie de página -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

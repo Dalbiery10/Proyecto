@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tu Nombre o Nombre de la Empresa">
+    {% load static %} <!-- Cargar la etiqueta static -->
+    <meta name="description" content="Descubre los mejores servicios locales en República Dominicana, incluyendo veterinarias y aseo de mascotas en Santo Domingo y Santiago.">
+    <meta name="keywords" content="servicios locales, veterinarias, aseo de mascotas, Santo Domingo, Santiago, República Dominicana">
+    <title>Servicios Locales en República Dominicana</title>
+    <link rel="icon" href="{% static 'imagenes/logo.jpg' %}" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+</head>
+<body>
+    {% include 'Header.html' %} <!-- Incluye el encabezado -->
+
+    <section id="servicios" class="my-5">
+        <h2 class="text-center mb-4">Servicios Locales en República Dominicana</h2>
+        <div class="container">
+            <div class="row">
+                <!-- Santo Domingo Section -->
+                <div class="col-md-6 mb-5">
+                    <h3 class="text-primary">Santo Domingo</h3>
+                    <div class="service-item">
+                        <h4>Veterinaria Los Prados</h4>
+                        <p>Dirección: Av. Los Próceres, Santo Domingo, R.D.</p>
+                        <p>Horario: Lunes a Sábado, 9:00 AM - 6:00 PM</p>
+                        <h5>Servicios adicionales:</h5>
+                        <ul>
+                            <li>Consultas generales para mascotas</li>
+                            <li>Vacunación y desparacitación</li>
+                            <li>Emergencias médicas 24/7</li>
+                        </ul>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d484393.5797164293!2d-70.4639683265625!3d18.468939400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf882324e9316d%3A0x6a2f8aeee1e14458!2sPadela!5e0!3m2!1ses!2sdo!4v1733523050913!5m2!1ses!2sdo"
+                            width="100%" height="200" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
+                    </div>
+
+                    <div class="service-item mt-4">
+                        <h4>Aseo de Mascotas Santo Domingo Este</h4>
+                        <p>Dirección: Calle Caracol, Santo Domingo Este, R.D.</p>
+                        <p>Horario: Martes a Domingo, 8:00 AM - 5:00 PM</p>
+                        <h5>Servicios ofrecidos:</h5>
+                        <ul>
+                            <li>Aseo completo para perros y gatos</li>
+                            <li>Baños, corte de uñas y cepillado</li>
+                            <li>Tratamientos estéticos para mascotas</li>
+                        </ul>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d484393.5797164293!2d-70.4639683265625!3d18.468939400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf810302d1720d%3A0x43d553d516cdd2f5!2sFundaci%C3%B3n%20Quisqueya%20en%20Desarrollo!5e0!3m2!1ses!2sdo!4v1733523127734!5m2!1ses!2sdo"
+                            width="100%" height="200" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Santiago Section -->
+                <div class="col-md-6 mb-5">
+                    <h3 class="text-primary">Santiago</h3>
+                    <div class="service-item">
+                        <h4>Centro Veterinario Santiago</h4>
+                        <p>Dirección: Calle Del Sol #45, Santiago, R.D.</p>
+                        <p>Horario: Lunes a Viernes, 9:00 AM - 5:00 PM</p>
+                        <h5>Servicios ofrecidos:</h5>
+                        <ul>
+                            <li>Consulta médica veterinaria</li>
+                            <li>Cirugías y procedimientos menores</li>
+                            <li>Control de enfermedades comunes</li>
+                        </ul>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d484393.5797164293!2d-70.4639683265625!3d18.468939400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaff33cc7c1d9bf%3A0x5807278987eefcb3!2sGhetto2Garden!5e0!3m2!1ses!2sdo!4v1733523226918!5m2!1ses!2sdo"
+                            width="100%" height="200" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
+                    </div>
+
+                    <div class="service-item mt-4">
+                        <h4>Aseo para Perros La Zurza</h4>
+                        <p>Dirección: Calle 16 de Agosto #10, Santiago, R.D.</p>
+                        <p>Horario: Lunes a Sábado, 8:00 AM - 6:00 PM</p>
+                        <h5>Servicios de aseo disponibles:</h5>
+                        <ul>
+                            <li>Baño para perros y gatos</li>
+                            <li>Recorte de pelaje según estilo</li>
+                            <li>Tratamientos especiales (antipulgas, hidratación)</li>
+                        </ul>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d484393.5797164293!2d-70.4639683265625!3d18.468939400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf8b2b79d6191f%3A0x381f4ef232d5c8cd!2sPawradise!5e0!3m2!1ses!2sdo!4v1733523269271!5m2!1ses!2sdo"
+                            width="100%" height="200" style="border:0;" allowfullscreen=""
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'PieDePagina.html' %} <!-- Incluye el pie de página -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

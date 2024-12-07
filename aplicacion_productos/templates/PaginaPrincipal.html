@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tu Nombre o Nombre de la Empresa">
+    {% load static %} <!-- Cargar la etiqueta static -->
+    <meta name="description" content="Descubre los mejores servicios locales en República Dominicana, incluyendo veterinarias y aseo de mascotas en Santo Domingo y Santiago.">
+    <meta name="keywords" content="servicios locales, veterinarias, aseo de mascotas, Santo Domingo, Santiago, República Dominicana">
+    <link rel="icon" href="{% static 'imagenes/logo.jpg' %}" type="image/jpg">
+    <title>Bienvenido a Cuidado de Mascotas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+</head>
+<body>
+    {% include 'Header.html' %} <!-- Incluye el encabezado --> 
+
+    <!-- Navegación principal -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="servicios">Servicios Locales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="politicas">Políticas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="articulos">Artículos y Noticias</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección principal de bienvenida -->
+    <main>
+        <section id="bienvenida" class="my-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Bienvenido a Nuestro Portal de Cuidado de Mascotas</h2>
+                <p class="text-center">Descubre todos los recursos, servicios y artículos que tenemos para ti y tu mascota.</p>
+            </div>
+        </section>
+
+        <!-- Carrusel sobre Cuidado de Perros -->
+        <section id="carrusel-cuidado-perros" class="my-5">
+            <div class="container">
+                <h3 class="text-center mb-4">Datos Interesantes sobre el Cuidado de Perros</h3>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'imagenes/CuidadoPerros.jpg' %}" class="d-block w-100" alt="Cuidado de Perros 1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Cuidado Básico de Perros</h5>
+                                <p>Asegúrate de mantener una dieta equilibrada para tu mascota y visitas regulares al veterinario.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'imagenes/PerroEjercicio.jpg' %}" class="d-block w-100" alt="Cuidado de Perros 2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Importancia de la Ejercicio</h5>
+                                <p>Los perros necesitan ejercicio regular para mantenerse saludables y felices. Paseos diarios son ideales.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'imagenes/PerroComiendo.jpg' %}" class="d-block w-100" alt="Cuidado de Perros 3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Cuidado del Pelaje</h5>
+                                <p>Un buen cuidado del pelaje incluye cepillado regular y baños apropiados. No olvides también el corte de uñas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de enlaces -->
+        <section id="enlaces" class="my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../static/imagenes/Servicios.jpg" alt="Políticas" class="card-img-top" alt="Servicios Locales">
+                            <div class="card-body">
+                                <h5 class="card-title">Servicios Locales</h5>
+                                <p class="card-text">Consulta los mejores servicios para tu mascota en tu localidad.</p>
+                                <a href="servicios" class="btn btn-primary">Ver Servicios</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../static/imagenes/Contacto.webp" alt="Políticas" class="card-img-top" alt="Servicios Locales">
+                            <div class="card-body">
+                                <h5 class="card-title">Contacto</h5>
+                                <p class="card-text">¿Tienes alguna pregunta? Contáctanos para más información.</p>
+                                <a href="contacto" class="btn btn-primary">Contactar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../static/imagenes/Politicas.jpg" class="card-img-top" alt="Políticas de Privacidad">
+                            <div class="card-body">
+                                <h5 class="card-title">Políticas de Privacidad</h5>
+                                <p class="card-text">Lee nuestras políticas sobre el uso y protección de tus datos.</p>
+                                <a href="politicas" class="btn btn-primary">Ver Políticas</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../static/imagenes/Articulo.png" class="card-img-top" alt="Artículos y Noticias">
+                            <div class="card-body">
+                                <h5 class="card-title">Artículos y Noticias</h5>
+                                <p class="card-text">Mantente informado con los mejores consejos y artículos sobre cuidado de mascotas.</p>
+                                <a href="articulos" class="btn btn-primary">Ver Artículos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% include 'PieDePagina.html' %} <!-- Incluye el pie de página -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

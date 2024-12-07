@@ -1,0 +1,26 @@
+{% extends 'PaginaPrincipal.html' %}
+
+{% block content %}
+<div class="login-container">
+    <h2>Bienvenido a [Nombre de la Página]</h2>
+    <p>Accede a tu cuenta para gestionar el cuidado de tu mascota</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="input-group">
+            <label for="id_username">Correo Electrónico:</label>
+            <input type="email" name="username" id="id_username" required autofocus placeholder="usuario@email.com">
+        </div>
+        <div class="input-group">
+            <label for="id_password">Contraseña:</label>
+            <input type="password" name="password" id="id_password" required placeholder="********">
+        </div>
+        <button type="submit" class="login-btn">Iniciar Sesión</button>
+    </form>
+
+    <div class="options">
+        <p><a href="{% url 'password_reset' %}">¿Olvidaste tu contraseña?</a></p>
+        <p><a href="{% url 'signup' %}">¿No tienes cuenta? Regístrate</a></p>
+    </div>
+</div>
+{% endblock %}

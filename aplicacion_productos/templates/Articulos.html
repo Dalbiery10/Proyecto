@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    {% load static %} <!-- Cargar la etiqueta static -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tu Nombre o Nombre de la Empresa">
+    <meta name="description" content="Descubre los mejores servicios locales en República Dominicana, incluyendo veterinarias y aseo de mascotas en Santo Domingo y Santiago.">
+    <meta name="keywords" content="servicios locales, veterinarias, aseo de mascotas, Santo Domingo, Santiago, República Dominicana">
+    <link rel="icon" href="{% static 'imagenes/logo.jpg' %}" type="image/jpg">
+    <title>Artículos y Noticias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+    <style>
+        .article-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+        .article-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+        .article-card img {
+            border-radius: 8px 8px 0 0;
+            height: 200px;
+            object-fit: cover;
+        }
+        .article-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .article-description {
+            color: #6c757d;
+        }
+        .article-item:hover .article-description {
+            color: #495057;
+        }
+        .full-article {
+            display: none;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .full-article h3 {
+            color: #007bff;
+        }
+        .btn-close {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    {% include 'Header.html' %} <!-- Incluye el encabezado -->
+
+
+    <section id="articulos" class="my-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Artículos y Noticias</h2>
+            <p class="text-center mb-5">Mantente actualizado con nuestras recomendaciones y consejos sobre el cuidado de tu perro.</p>
+
+            <div class="row g-4">
+                <div class="col-md-4" onclick="showArticle(1)">
+                    <div class="article-card card">
+                        <img src="../static/imagenes/CuidadoPerros.jpg" alt="Políticas" class="card-img-top" alt="Servicios Locales">
+                        <div class="card-body">
+                            <h5 class="card-title article-title">Cuidados Básicos para Cachorros</h5>
+                            <p class="card-text article-description">Aprende cómo cuidar de tu cachorro para asegurar su buen desarrollo físico y emocional. Haz clic para más información.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" onclick="showArticle(2)">
+                    <div class="article-card card">
+                        <img src="../static/imagenes/PerroComiendo.jpg" alt="Políticas" class="card-img-top" alt="Servicios Locales">
+                        <div class="card-body">
+                            <h5 class="card-title article-title">Cómo Alimentar a tu Perro</h5>
+                            <p class="card-text article-description">Conoce los mejores consejos sobre la alimentación adecuada para tu perro y cómo prevenir enfermedades.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" onclick="showArticle(3)">
+                    <div class="article-card card">
+                        <img src="../static/imagenes/PerroEjercicio.jpg" alt="Políticas" class="card-img-top" alt="Servicios Locales">
+                        <div class="card-body">
+                            <h5 class="card-title article-title">Ejercicio Adecuado para Perros</h5>
+                            <p class="card-text article-description">Descubre la importancia del ejercicio para mantener a tu perro saludable y feliz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="full-article" id="full-article">
+                <h3 id="full-article-title"></h3>
+                <p id="full-article-content"></p>
+                <button class="btn btn-close" onclick="hideArticle()">Cerrar</button>
+            </div>
+        </div>
+    </section>
+
+    {% include 'PieDePagina.html' %} <!-- Incluye el pie de página -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showArticle(articleId) {
+            // Definir los datos para cada artículo
+            const titles = [
+                "Cuidados Básicos para Cachorros",
+                "Cómo Alimentar a tu Perro",
+                "Ejercicio Adecuado para Perros"
+            ];
+            const content = [
+                "El cuidado de un cachorro es esencial para su salud y desarrollo. Los cachorros necesitan una atención especial en los primeros meses de vida para asegurarse de que crezcan fuertes y saludables. Debes crear un ambiente seguro y cómodo para tu cachorro, proporcionándole un espacio adecuado, juguetes y una rutina diaria estable. Asegúrate de llevarlo al veterinario para su chequeo inicial, vacunas y desparacitación. Es importante que lo socialices temprano para evitar problemas de comportamiento más adelante. Además, el entrenamiento básico, como enseñar a tu cachorro a caminar con correa y a responder a comandos, es crucial para su desarrollo emocional y social.",
+                
+                "La alimentación adecuada es fundamental para mantener a tu perro en una buena salud. Los perros tienen necesidades alimenticias diferentes según su edad, tamaño, raza y nivel de actividad. Los cachorros requieren una dieta más rica en nutrientes para soportar su crecimiento, mientras que los perros adultos necesitan una dieta equilibrada que les ayude a mantener su peso y energía. Al seleccionar alimentos, opta por aquellos que contengan proteínas de alta calidad, carbohidratos, grasas saludables y una variedad de vitaminas y minerales. Evita los alimentos tóxicos para los perros, como el chocolate, las uvas, la cebolla y el ajo. Además, asegúrate de mantener un horario regular de alimentación y no sobrealimentar a tu perro para prevenir la obesidad.",
+                
+                "El ejercicio adecuado es vital para el bienestar físico y mental de tu perro. Los perros necesitan una cantidad adecuada de ejercicio según su raza y edad. Los cachorros, aunque más activos, necesitan períodos cortos de ejercicio frecuente para evitar el agotamiento. A medida que tu perro crece, necesitará caminatas diarias y actividades más intensas. Algunas razas, como los pastores y los retrievers, tienen más energía y necesitan más ejercicio, mientras que razas más pequeñas o menos activas pueden requerir menos. El ejercicio no solo ayuda a mantener a tu perro en forma, sino que también le ofrece estímulos mentales importantes. Las caminatas, los juegos de buscar objetos y el entrenamiento de agilidad son excelentes opciones para mantener a tu perro activo y feliz."
+            ];
+
+            // Actualizar contenido de artículo completo
+            document.getElementById('full-article-title').textContent = titles[articleId - 1];
+            document.getElementById('full-article-content').textContent = content[articleId - 1];
+            document.getElementById('full-article').style.display = 'block';
+        }
+
+        function hideArticle() {
+            document.getElementById('full-article').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
